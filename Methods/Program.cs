@@ -22,9 +22,18 @@ namespace Methods
             product2.Fiyati = 5.45;
             product2.StokAdedi = 5000;
 
-            Product[] products = new Product[] { product1, product2 };
+            Product product3 = new Product();
+            product3.Id = 03;
+            product3.Adi = "Patates";
+            product3.Aciklama = "Ödemiş Patatesi";
+            product3.Fiyati = 12.99;
+            product3.StokAdedi = 1185;
 
-            foreach (Product product in products)
+            
+
+            Product[] products = new Product[] { product1, product2, product3};
+
+            foreach (Product product in products) //buradaki küçük harfle yazılan product alias olarak kullanılır. Büyük harfli olan Product ise veri tipini verir. foreach te var olarak da kalabilir.
             {
                 Console.WriteLine("ID: " + product.Id);
                 Console.WriteLine("ADI: " + product.Adi);
@@ -43,6 +52,7 @@ namespace Methods
             SepetManager sepetManager = new SepetManager();
             sepetManager.Ekle(product1);
             sepetManager.Ekle(product2);
+            sepetManager.Ekle(product3);    
 
 
             sepetManager.Ekle2("Armut", "Ahlat Armutu", 10.99, 5);
